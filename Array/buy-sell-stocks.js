@@ -3,6 +3,7 @@ https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
 /**
  * @param {number[]} prices
  * @return {number}
+ * * Using two Pointers technique
  */
 var maxProfit = function(prices) {
     
