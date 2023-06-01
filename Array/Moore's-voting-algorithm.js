@@ -40,6 +40,10 @@ var majorityElement = function(nums) {
     }
 
     return majorityElement;
+    //tc = O(N)
+    //sc = O(1)
+
+
     // let hashMap = new Map();
     
     // for ( let i = 0; i < nums.length; i++ )
@@ -65,4 +69,7 @@ var majorityElement = function(nums) {
     // } 
 
     // return;
+
+    //tc = O(N)
+    //sc = O(N)
 };
