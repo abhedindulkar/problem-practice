@@ -1,6 +1,6 @@
 let ans = [];
 
-module.exports = { 
+module.exports = {
  //param A : integer
  //return a array of array of integers
 	solveNQueens : function(A) {
@@ -21,12 +21,10 @@ module.exports = {
                 ans[i][j] = [...ans[i][j]].join("");
             }
         }
+
         return ans;
 	}
 };
-
-// blockedLeftToRight [ N + i - j]
-// blockedRightToLeft [ i + j]
 
 function nQueens(row, column, blockedColumn, blockedLeftToRightDiag, blockedRightToLeftDiag, currentPlacedQueens, N) {
     
@@ -56,83 +54,3 @@ function nQueens(row, column, blockedColumn, blockedLeftToRightDiag, blockedRigh
 
     return;
 }
-
-// let N = 4
-// let blockedColumn = new Array(N).fill(0);
-// let blockedLeftToRightDia = new Array(2* N).fill(0);
-// let blockedRightToLeftDia = new Array(2 * N).fill(0);
-// let board = Array.from({length: N}, () => Array.from({length: N}, () => "." ));
-
-
-// nQueens(0, 0, blockedColumn, blockedLeftToRightDia, blockedRightToLeftDia, board, N);
-
-// console.log('ans', ans);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let nq = nQueens(3);
-// // nq[0][1] = 1;
-// console.log(nq);
-
-
-
-
-
-
-
-
-
-// ans = [];
-
-// columnMap = new Map();
-
-// let board = Array.from({length: A}, () => Array.from({length: A}, () => null ));
-
-// let tempAns = [];
-
-// let currentQueenCount = 0;
-
-// for ( let firstColumn = A - 1; firstColumn >= 0; firstColumn++ )
-// {
-    
-// }
-
-// for ( let row = 0; row < A; row++ ) {
-    
-//     for ( let column = ; column < A; column++ ) {
-        
-//         if ( columnMap.has(column) )
-//             continue;
-        
-//         // if ( board[row][column] == "." )
-//         //     continue;
-            
-//         // check if both diagonals are free.
-
-//         // set 
-//     }
-
-//     if ( currentQueenCount > A )
-//     break;
-// }
