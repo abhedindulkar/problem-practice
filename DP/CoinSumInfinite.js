@@ -1,49 +1,5 @@
 
-function add(arr, index, currentTotal, total)
-{
-    if ( index >= arr.length )
-        return 0; 
-    
-    if ( arr[index] + currentTotal > total )
-        return 0;
 
-    if ( arr[index] + currentTotal === total )
-        return 1;
-    
-    let currentSum = 0;
-
-    // console.log('currentIndex', index, 'value', arr[index])
-
-    for ( let i = index; i < arr.length; i++ )
-    {
-        currentSum += add(arr, i, currentTotal + arr[i], total)
-    }
-
-    return currentSum;
-}
-
-function getSum(arr, total)
-{
-    let currentSum = 0;
-
-    console.log(add(arr, 0, arr[0], total))
-
-    return;
-    
-    for ( let i = 0; i < arr.length; i++ )
-    {
-        if ( arr[i] === total )
-        {
-            currentSum += 1;
-            continue;
-        }
-
-        console.log('adding for ', arr[i], '-> ',  add(arr, 1, arr[i], total));
-        currentSum += add(arr, 1, arr[i], total)
-    }
-    
-    return currentSum;
-}
 
 let dp;
 
@@ -70,7 +26,7 @@ function coinchange2(A, B) {
     // getCombinations(A.length -1, A, B)
     // console.log(dp);
     // return;
-    return getCombinations(A.length -1, A, B) % 1000007;
+    return getCombinations(A.length - 1, A, B) % 1000007;
 }
 
 function getCombinationsOld(currentIndex, coins, targetTotal)
